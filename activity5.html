@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Two Numbers</title>
+    <script>
+        function addTwoNumbers() {
+            const num1 = parseFloat(document.getElementById("number1").value);
+            const num2 = parseFloat(document.getElementById("number2").value);
+            let sum = num1 + num2;
+
+            document.getElementById("result").innerText = `Result: ${sum}`;
+        }
+    </script>
+    <style>
+        body {
+            transition: background-color 0.5s, color 0.5s;
+            background-color: white;
+            color: black;
+        }
+        body.dark-mode {
+            background-color: black;
+            color: white;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggleButton">Dark/Light</button>
+    <h1>Add Two Numbers</h1>
+    <label for="number1">Enter the first number:</label>
+    <input type="text" id="number1" placeholder="First number">
+    <br><br>
+    <label for="number2">Enter the second number:</label>
+    <input type="text" id="number2" placeholder="Second number">
+    <br><br>
+    <button onclick="addTwoNumbers()">Add</button>
+    <h2 id="result"></h2>
+    
+
+
+<script>
+    const toggleButton = document.getElementById('toggleButton');
+    toggleButton.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+    }
+);
+</script>
+
+</body>
+</html>
